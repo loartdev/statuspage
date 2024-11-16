@@ -1,50 +1,44 @@
 [![Health Check](../../actions/workflows/health-check.yml/badge.svg)](../../actions/workflows/health-check.yml)
 
-# Statsig's Open-Source Status Page
+LoArt & Dev Services Status
+==========================
 
-We tried various Status Pages out there, and built this as a fun little hobby project to make status pages as simple as possible.
+A fork of [Statsig's Open-Source Status Page](https://github.com/statsig-io/statuspage), customized for LoArt & Dev Services.
 
-## Demo
+**What is it?**
+---------------
 
-- https://status.statsig.com
+LoArt & Dev Services Status is a simple, zero-dependency, pure js/html status page based on GitHub Pages and Actions. It displays the current status of our services, providing a clear and easily consumable overview of our system's health.
 
-## Setup instructions
+**How does it work?**
+---------------------
 
-1. Fork the [template repository](https://github.com/statsig-io/statuspage/).
-2. Update `urls.cfg` to include your urls.
+This project uses GitHub actions to wake up every hour and run a shell script (`health-check.sh`). The script runs `curl` on every URL in your config and appends the result of that run to a log file and commits it to the repository. The log is then pulled dynamically from `index.html` and displayed on the status page.
 
-```cfg
-key1=https://example.com
-key2=https://statsig.com
-```
+**Customizations and Features**
+------------------------------
 
-3. Update `index.html` and change the title.
+* [List any customizations or features you've added to the original project]
 
-```html
-<title>My Status Page</title>
-<h1>Services Status</h1>
-```
+**Getting Started**
+-------------------
 
-4. Set up GitHub Pages for your repository.
+1. Clone the repository: `git clone https://github.com/your-username/loart-dev-status.git`
+2. Follow the setup instructions in the original project: [link to original project's setup instructions]
+3. Customize the `health-check.sh` script to fit your needs
 
-![image](https://user-images.githubusercontent.com/74588208/121419015-5f4dc200-c920-11eb-9b14-a275ef5e2a19.png)
+**Contributors**
+---------------
 
-## How does it work?
+* [LoArt & Dev (Simon Lopez)](https://loart.dev)
+* Statsig's
 
-This project uses GitHub actions to wake up every hour and run a shell script (`health-check.sh`). This script runs `curl` on every url in your config and appends the result of that run to a log file and commits it to the repository. This log is then pulled dynamically from `index.html` and displayed in a easily consumable fashion. You can also run that script from your own infrastructure to update the status page more often.
+**License**
+----------
 
-## What does it not do (yet)?
+This project is licensed under [the original license].
 
-1. Incident management.
-2. Outage duration tracking.
-3. Updating status root-cause.
+**Acknowledgments**
+------------------
 
-## Got new ideas?
-
-Send in a PR - we'd love to integrate your ideas.
-
-## In case...
-
-You are looking for a developer friendly Feature flags, and A/B experimentation service for your product, check out: https://www.statsig.com
-
-![Statsig status page](https://user-images.githubusercontent.com/74588208/146078161-778fcb99-4a59-4e39-9fc0-abef18d5ac52.png)
+This project is a fork of [Statsig's Open-Source Status Page](https://github.com/statsig-io/statuspage). We appreciate their work and contributions to the open-source community.
