@@ -8,7 +8,9 @@
   <body>
     <div class="pageContainer">
       <div class="headline">
-        <img src="https://loart.dev/logo.svg" alt="Logo" width="200px" />
+        <a href="https://loart.dev">
+          <img src="https://loart.dev/logo.svg" alt="Logo" width="200px" />
+        </a>
         <span> System Status </span>
       </div>
       <div id="reports" class="reportContainer"></div>
@@ -32,7 +34,7 @@
         ></div>
         <div id="statusContainerTemplate" class="statusContainer">
           <div class="statusHeader">
-            <h6 class="statusTitle">$title&nbsp;</h6>
+            <h6 class="statusTitle"><a href="$url">$title&nbsp;</a></h6>
             <div class="$color statusHeadline">$status</div>
           </div>
           <div class="statusSubtitle">
@@ -44,7 +46,7 @@
     </div>
     <footer>
       Forked from
-      <a href="https://github.com/statsig-io/statuspage/"
+      <a rel="nofollow" href="https://github.com/statsig-io/statuspage/"
         >Statsig's Open-Source Status Page</a
       >.
     </footer>
